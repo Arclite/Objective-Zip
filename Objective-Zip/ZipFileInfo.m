@@ -36,8 +36,16 @@
 
 @implementation ZipFileInfo
 
+@synthesize name= _name;
+@synthesize length= _length;
+@synthesize level= _level;
+@synthesize crypted= _crypted;
+@synthesize size= _size;
+@synthesize date= _date;
+@synthesize crc32= _crc32;
+
 - (id) initWithName:(NSString *)name length:(NSUInteger)length level:(ZipCompressionLevel)level crypted:(BOOL)crypted size:(NSUInteger)size date:(NSDate *)date crc32:(NSUInteger)crc32 {
-    if (self = [super init]) {
+    if ((self = [super init])) {
         _name= [name retain];
         _length= length;
         _level= level;
@@ -56,12 +64,5 @@
     [super dealloc];
 }
 
-@synthesize name= _name;
-@synthesize length= _length;
-@synthesize level= _level;
-@synthesize crypted= _crypted;
-@synthesize size= _size;
-@synthesize date= _date;
-@synthesize crc32= _crc32;
-
 @end
+
