@@ -39,7 +39,7 @@
 
 #define FILE_IN_ZIP_MAX_NAME_LENGTH (256)
 
-static NSString *ZipFileErrorDomain = @"ZipFileErrorDomain";
+static NSString * const ZipFileErrorDomain = @"ZipFileErrorDomain";
 
 @implementation ZipFile
 
