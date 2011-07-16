@@ -4,7 +4,7 @@
 //
 //  Created by Gianluca Bertani on 27/12/09.
 //  Copyright 2009-10 Flying Dolphin Studio. All rights reserved.
-//	Modified by Geoff Pado on 29/10/10.
+//  Modified by Geoff Pado on 29/10/10.
 //
 //  Redistribution and use in source and binary forms, with or without 
 //  modification, are permitted provided that the following conditions 
@@ -37,15 +37,14 @@
 
 
 @interface ZipFileInfo : NSObject {
-	
 @private
-	NSUInteger _length;
-	ZipCompressionLevel _level;
-	BOOL _crypted;
-	NSUInteger _size;
-	NSDate *_date;
-	NSUInteger _crc32;
-	NSString *_name;
+    NSUInteger          _length;
+    ZipCompressionLevel _level;
+    BOOL                _crypted;
+    NSUInteger          _size;
+    NSDate              *_date;
+    NSUInteger          _crc32;
+    NSString            *_name;
 }
 
 - (id) initWithName:(NSString *)name length:(NSUInteger)length level:(ZipCompressionLevel)level crypted:(BOOL)crypted size:(NSUInteger)size date:(NSDate *)date crc32:(NSUInteger)crc32;
