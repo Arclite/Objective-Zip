@@ -37,15 +37,14 @@
 
 
 @interface ZipWriteStream : NSObject {
-	NSString *_fileNameInZip;
-
 @private
-	zipFile _zipFile;
+    NSString *_fileNameInZip;
+    zipFile _zipFile;
 }
 
 - (id) initWithZipFileStruct:(zipFile)zipFile fileNameInZip:(NSString *)fileNameInZip;
 
-- (void)writeData:(NSData *)data error:(NSError **)writeError;
-- (void)finishedWritingWithError:(NSError **)writeError;
+- (NSUInteger)writeData:(NSData *)data error:(NSError **)writeError;
+- (NSUInteger)finishedWritingWithError:(NSError **)writeError;
 
 @end

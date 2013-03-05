@@ -1,5 +1,36 @@
+# OSX
 .DS_Store
-build/
-Objective-Zip.xcodeproj/*.mode1v3
-Objective-Zip.xcodeproj/*.perspectivev3
-Objective-Zip.xcodeproj/*.pbxuser
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# VIM
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Ignore tags created by etags and ctags
+TAGS
+tags
+
+# Xcode
+build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+

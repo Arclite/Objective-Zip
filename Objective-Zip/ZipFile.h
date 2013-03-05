@@ -4,7 +4,7 @@
 //
 //  Created by Gianluca Bertani on 25/12/09.
 //  Copyright 2009-10 Flying Dolphin Studio. All rights reserved.
-//	Modified by Geoff Pado on 29/10/10.
+//  Modified by Geoff Pado on 29/10/10.
 //
 //  Redistribution and use in source and binary forms, with or without 
 //  modification, are permitted provided that the following conditions 
@@ -39,29 +39,29 @@
 
 
 typedef enum {
-	ZipFileModeUnzip,
-	ZipFileModeCreate,
-	ZipFileModeAppend
+    ZipFileModeUnzip,
+    ZipFileModeCreate,
+    ZipFileModeAppend
 } ZipFileMode;
 
 typedef enum {
-	ZipCompressionLevelDefault= -1,
-	ZipCompressionLevelNone= 0,
-	ZipCompressionLevelFastest= 1,
-	ZipCompressionLevelBest= 9
-} ZipCompressionLevel;	
+    ZipCompressionLevelDefault = -1,
+    ZipCompressionLevelNone    = 0,
+    ZipCompressionLevelFastest = 1,
+    ZipCompressionLevelBest    = 9
+} ZipCompressionLevel;
 
 @class ZipReadStream;
 @class ZipWriteStream;
 @class ZipFileInfo;
 
 @interface ZipFile : NSObject {
-	NSString *_fileName;
-	ZipFileMode _mode;
-
 @private
-	zipFile _zipFile;
-	unzFile _unzFile;
+    NSString    *_fileName;
+    ZipFileMode _mode;
+
+    zipFile _zipFile;
+    unzFile _unzFile;
 }
 
 - (id)initWithFileName:(NSString *)fileName mode:(ZipFileMode)mode;

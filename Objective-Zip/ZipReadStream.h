@@ -37,15 +37,15 @@
 
 
 @interface ZipReadStream : NSObject {
-	NSString *_fileNameInZip;
-	
 @private
-	unzFile _unzFile;
+    NSString *_fileNameInZip;
+    unzFile _unzFile;
 }
 
 - (id) initWithUnzFileStruct:(unzFile)unzFile fileNameInZip:(NSString *)fileNameInZip;
 
 - (NSUInteger)readDataWithBuffer:(NSMutableData *)buffer error:(NSError **)readError;
-- (void)finishedReadingWithError:(NSError **)readError;
+- (NSUInteger)finishedReadingWithError:(NSError **)readError;
 
 @end
+
